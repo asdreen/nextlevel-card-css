@@ -16,7 +16,7 @@ body {
 
 #card1:hover {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
-    transition: box-shadow 0.3s
+    transition: box-shadow 0.3s ease-in-out;
 }
 
 #card1 img {
@@ -35,7 +35,7 @@ body {
     border-radius: 50px;
     cursor: pointer;
     transform: translateX(5px);
-    transition: transform 0.1s;
+ 
    
 }
 
@@ -53,11 +53,13 @@ body {
   font-size: xx-large;
   border-width: 7px 0 7px 10px;
   border-color: transparent transparent transparent white;
+  
 }
 
 #card1:hover #card1-buttom {
-  transform: translateX(100%);
-  opacity: 0;
+    transform:rotate(-100px);
+    opacity: 0;
+    transition: ease-in;
 }
 
 #elements {
@@ -66,16 +68,15 @@ body {
   bottom: 30px;
   color: black;
   text-align: center;
-  padding-left: 20px;
+  padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 5px;
   font-size: xx-large;
   transition: transform 0.3s, opacity 0.3s;
   display: flex;
+  transform: scale(1);
 }
-
-#elements i  {
-  
+  #elements #arrow {
     background: lightgrey;
     height: 40px;
     width: 255px;
@@ -84,7 +85,24 @@ body {
     cursor: pointer;
 }
 
+#elements #download {
+    background: lightgrey;
+    border-radius: 50px;
+    margin-left: 0.8rem;
+    height: 38px;
+    width: 50px;
+    cursor: pointer;
+}
+ #elements #more {
+    background: lightgrey;
+    border-radius: 50px;
+    margin-left: 0.8rem;
+    height: 38px;
+    width: 50px;
+    cursor: pointer;
+ }
+
 #card1:hover #elements {
-    transform: translateX(-100%);
-  opacity: 0;
+    transform: translate(100px);
+    opacity: 0.1;
 }
